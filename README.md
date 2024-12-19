@@ -1,2 +1,2 @@
 # kursmaterial
-This repository contains course material associated with computational teaching. Each branch represents a course module. Branches cannot and should not be merged with the master branch.
+Course material for module MAV110 Marina modeller och databaser
