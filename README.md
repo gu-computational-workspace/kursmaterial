@@ -1,2 +1,2 @@
 # kursmaterial
-Course material to be synced with jhub computational workspaces.
+Course material för LFY032 Programmering i Python och artificiell intelligens
