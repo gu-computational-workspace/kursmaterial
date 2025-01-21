@@ -1,2 +1,2 @@
 # kursmaterial
-Course material for module MAV110 Marina modeller och databaser
+Course material to be synced with jhub computational workspaces.
