@@ -1,0 +1,8 @@
+# Det här är en .gitignore fil. Den används för att ignorera filer och mappar som inte ska pushas till git :)
+
+# Temporära .ipynb filer
+*.ipynb_checkpoints/
+
+# Temporära .pyc filer
+*.pyc
+
