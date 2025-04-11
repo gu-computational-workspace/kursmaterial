@@ -1,2 +1,2 @@
 # kursmaterial
-Course material to be synced with jhub computational workspaces.
+Course material for module OC4920 Observing the Ocean from Micro to Macro Scale
