@@ -1,2 +1,2 @@
 # kursmaterial
-Course material to be synced with jhub computational workspaces.
+Course material for module EHG310 Economic History: Advanced
