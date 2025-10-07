@@ -1,2 +1,2 @@
 # kursmaterial
-Course material for module EHG310 Economic History: Advanced
+Course material for module NEK206 Econometrics
