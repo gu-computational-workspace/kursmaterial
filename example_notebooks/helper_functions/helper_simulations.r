@@ -1,5 +1,7 @@
-library(dplyr)
-library(ggplot2)
+suppressPackageStartupMessages({
+    library(dplyr)
+    library(ggplot2)
+})
 
 
 simulate_tstat <- function(sample_size, true_beta1 = 3) {
