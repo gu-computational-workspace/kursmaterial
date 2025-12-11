@@ -1,2 +1,2 @@
 # kursmaterial
-Course material for module NEK206 Econometrics
+Course material for module FEK211 Digitalisation and Management
