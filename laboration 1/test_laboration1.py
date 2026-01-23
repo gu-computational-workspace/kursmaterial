@@ -31,11 +31,10 @@ def regn_år(year):
     return DATA[(DATA["date"] >= pandas.to_datetime(f"{year}-01-01")) & (DATA["date"] < pandas.to_datetime(f"{year+1}-01-01"))]["Nederbörd(mm)"].sum()
 
 def nederbörd_månader():
-    year_month = (DATA
-            .groupby(by=lambda item: (DATA.iloc[item]["date"].year, DATA.iloc[item]["date"].month))
-            .sum())
-    ret = year_month.groupby(by=lambda item: item[1]).mean().to_dict()["Nederbörd(mm)"]
-    return {str(month): rain for month, rain in ret.items()}
+    year_month=DATA.groupby(by=lambda item: (DATA.iloc[item]["date"].year, DATA.iloc[item]["date"].month))
+    summed_year_month=year_month["Nederbörd(mm)"].sum()
+    monthly = summed_year_month.groupby(by=lambda item: item[1]).mean().to_dict()
+    return monthly
 
 def regn_metrics(year1, year2):
     data = DATA.copy()
@@ -145,10 +144,12 @@ def test_rain_year(tb):
 def test_rain_months(tb):
     func = 'rain_months'
     rm = get_nb_ref_safe(tb, func)
+
+    
     print(f"*** Testar funktionen {func} ***")
     
     res = dict(rm(ROOT_SMHI))
-    
+    res = {int(k): v for k, v in res.items()}
     ret_type = type(res)
     if ret_type is not dict:
         error(f"Datatypen för returvärdet för funktionen {func} är inte dict, din funktion returnerar {ret_type}")
@@ -159,7 +160,8 @@ def test_rain_months(tb):
         return False
 
     value_type = type(list(res.values())[0])
-    
+    key_type = type(list(res.keys())[0])
+
     #if key_type is not int:
     #    error(f"Din dict har inte nycklar av typen int, en nyckel har typ {key_type}")
         
@@ -168,8 +170,10 @@ def test_rain_months(tb):
         return False
     
     facit = nederbörd_månader()
+
     for month, regn in facit.items():
-        if not month in res:
+
+        if not int(month) in res:
             error(f"Din dict innehåller inte nyckel för månad {month}")
             return False
         
