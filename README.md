@@ -1,2 +1,2 @@
 # kursmaterial
-Course material for module NEK310 Data Analytics for Economics and Finance
+Course material to be synced with jhub computational workspaces
