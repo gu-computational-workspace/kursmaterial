@@ -1,2 +1,2 @@
 # kursmaterial
-Course material to be synced with jhub computational workspaces
+Course material for module GM0431 Methods för research and practice
