@@ -1,0 +1,6 @@
+2023-12-18 12:35:51,636 - INFO - Program started
+2023-12-18 12:35:51,637 - DEBUG - Adding 3 and 4
+2023-12-18 12:35:51,637 - INFO - Result: 7
+2023-12-18 12:35:51,637 - INFO - Calculation complete. Result: 7
+2023-12-18 12:35:51,637 - DEBUG - Debugging information
+2023-12-18 12:35:51,638 - INFO - Program finished
